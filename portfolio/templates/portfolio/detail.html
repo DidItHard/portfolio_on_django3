@@ -1,19 +1,36 @@
 {% extends "portfolio/base.html" %}
-
-{% load static %}
+<head>
+    {% load static %}
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">-->
+    <style>
+         p {
+          font-size: 20px;
+            color: red;
+         }
+    </style>
+</head>
+<body>
 
 {% block content %}
+    <div class="row justify-content-center my-3">
+        <div class="col-7">
+            <img src="{{ project.image.url }}" class="img-fluid">
+        </div>
+    </div>
 
-<div class="row justify-content-center my-3">
-  <div class="col-5">
-    <img src="{{ project.image.url }}" class="img-fluid">
-  </div>
-</div>
+    <h1 class="text-center mt-5" id="projectdetailtitle">{{ project.title }}</h1><br>
 
-<h1 class="text-center mt-5" id="projectdetailtitle">{{ project.title }}</h1>
+    <!--<h5 class="text-center text-muted mb-5">{{ post.date|date:'F jS Y' }}</h5>-->
 
-<!--<h5 class="text-center text-muted mb-5">{{ post.date|date:'F jS Y' }}</h5>-->
-
-{{ project.content|safe }}
-<br><br><br><br><br><br><br>
+    <p id="content">{{ project.content|safe }}</p>
+    <br><br>
+    {% if project.url %}
+        <div class="text-left">
+        <a href="{{ project.url }}">
+            <button type="button" class="btn btn-dark">Код на GitHub</button>
+        </a>
+        </div>
+    {% endif %}
+    <br><br><br><br><br>
 {% endblock %}
+</body>
