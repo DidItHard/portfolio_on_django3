@@ -29,7 +29,7 @@
         <a href="{{ project.url }}" target="_blank">
             {% if "github.com" in project.url %}
                 <button type="button" class="btn btn-dark">Код на GitHub</button>
-            {% else %}
+            {% elif "disk.yandex" in project.url %}
                 <button type="button" class="btn btn-warning">Готовые работы на Яндекс.Диске</button>
             {% endif %}
         </a>
