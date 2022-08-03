@@ -1,13 +1,6 @@
-{% extends "portfolio/base.html" %}
 <head>
+    {% extends "portfolio/base.html" %}
     {% load static %}
-<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">-->
-    <style>
-         p {
-          font-size: 20px;
-            color: red;
-         }
-    </style>
 </head>
 <body>
 
@@ -24,6 +17,8 @@
 
     <p id="content">{{ project.content|safe }}</p>
     <br><br>
+
+    <!-- Link button to works or code -->
     {% if project.url %}
         <div class="text-left">
         <a href="{{ project.url }}" target="_blank">
@@ -35,6 +30,8 @@
         </a>
         </div>
     {% endif %}
+
     <br><br><br><br><br>
 {% endblock %}
+
 </body>
