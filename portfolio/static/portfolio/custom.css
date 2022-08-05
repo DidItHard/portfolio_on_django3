@@ -19,9 +19,7 @@ body {
     font-size: 6rem;
 }
 
-#projectdetailtitle {
-    font-size: 4rem;
-}
+
 #content {
     font-size: 1.25rem;
 }
@@ -32,5 +30,8 @@ body {
     }
     #blogdetailtitle {
         font-size: 5rem;
+    }
+    #projectdetailtitle {
+        font-size: 4rem;
     }
 }
